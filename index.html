@@ -7,34 +7,44 @@
     <link rel="icon" type="image/png" href="lartz_logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
   <body class="bg-danger">
     <!-- Paling Atas -->
     <div class="container p-0 mb-4 mt-4 rounded-3 shadow bg-white">
       <!-- Menu -->
-      <nav class="d-md-flex p-4">
-        <div class="text-danger" ><h1>Lartz_</h1></div>
-        <div class="ms-auto my-auto">
-          <ul class="list-inline m-0'">
-            <li class="list-inline-item mx-md-3"><a href="#collections" class="text-decoration-none text-dark fw-bold">Produk Kami</a></li>
-            <li class="list-inline-item mx-md-3"><a href="#tentang" class="text-decoration-none text-dark fw-bold">Tentang Kami</a></li>
-            <li class="list-inline-item mx-md-3"><a href="#order" class="text-decoration-none text-dark fw-bold">Cara Order</a></li>
-          </ul>
+      <nav class="navbar navbar-expand-lg p-4">
+        <div class="container-fluid">
+          <a class="navbar-brand text-danger" href="#"><h1>Lartz_</h1></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item mx-md-3"><a href="#collections" class="nav-link text-dark fw-bold">Produk Kami</a></li>
+              <li class="nav-item mx-md-3"><a href="#tentang" class="nav-link text-dark fw-bold">Tentang Kami</a></li>
+              <li class="nav-item mx-md-3"><a href="#order" class="nav-link text-dark fw-bold">Cara Order</a></li>
+            </ul>
+          </div>
         </div>
       </nav>
 
       <!-- Banner -->
       <div class="px-4 mb-4">
-        <img src="images/banner.png" class="w-100 rounded-3" />
+        <img src="images/banner.png" class="w-100 rounded-3 img-fluid" />
       </div>
 
       <!-- Catalog -->
-      <h3 class="text-center bg-danger text-light" id="collections">Our Collections</h3>
-      <div class="text-center w-50 mx-auto ">Tersedia banyak pilihan yang tersedia di bawah ini mulai dari VectorAt,Banner,Xbanner,Piala,Poster,Plakat,Stempel dan kebutuhan lainnya, selain itu jua tersedia pilihan jasa yaitu sebagai editor video</div>
+      <h3 class="text-center bg-danger text-light p-2" id="collections">Our Collections</h3>
+      <div class="text-center w-50 mx-auto px-3 py-2">
+        Tersedia banyak pilihan yang tersedia di bawah ini mulai dari VectorAt, Banner, Xbanner, Piala, Poster, Plakat, Stempel dan kebutuhan lainnya, selain itu juga tersedia pilihan jasa yaitu sebagai editor video
+      </div>
       
-      <div class="row row-cols-md-3 row-cols-2 gx-5 p-5">
-        <div class="col mb-5">
-          <div class="card shadow">
-            <img src="images/buku1.jpg" class="card-img-top" />
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 p-3">
+        <div class="col">
+          <div class="card h-100 shadow">
+            <div class="card-img-top">
+              <img src="images/buku1.jpg" alt="Xbanner">
+            </div>
             <div class="card-body">
               <p class="card-text">Xbanner + Tiang</p>
             </div>
@@ -49,9 +59,11 @@
             </div>
           </div>
         </div>
-        <div class="col mb-5">
-          <div class="card shadow">
-            <img src="images/buku2.jpg" class="card-img-top" />
+        <div class="col">
+          <div class="card h-100 shadow">
+            <div class="card-img-top">
+              <img src="images/buku2.jpg" alt="ID CARD">
+            </div>
             <div class="card-body">
               <p class="card-text">ID CARD</p>
             </div>
@@ -66,9 +78,11 @@
             </div>
           </div>
         </div>
-        <div class="col mb-5">
-          <div class="card shadow">
-            <img src="images/buku3.jpg" class="card-img-top" />
+        <div class="col">
+          <div class="card h-100 shadow">
+            <div class="card-img-top">
+              <img src="images/buku3.jpg" alt="VectorArt">
+            </div>
             <div class="card-body">
               <p class="card-text">VectorArt</p>
             </div>
@@ -83,9 +97,11 @@
             </div>
           </div>
         </div>
-        <div class="col mb-5">
-          <div class="card shadow">
-            <img src="images/buku4.jpg" class="card-img-top" />
+        <div class="col">
+          <div class="card h-100 shadow">
+            <div class="card-img-top">
+              <img src="images/buku4.jpg" alt="Medali">
+            </div>
             <div class="card-body">
               <p class="card-text">Medali</p>
             </div>
@@ -100,9 +116,11 @@
             </div>
           </div>
         </div>
-        <div class="col mb-5 ">
-          <div class="card shadow">
-            <img src="images/buku5.jpg" class="card-img-top" />
+        <div class="col">
+          <div class="card h-100 shadow">
+            <div class="card-img-top">
+              <img src="images/buku5.jpg" alt="Spanduk">
+            </div>
             <div class="card-body">
               <p class="card-text">Spanduk</p>
             </div>
@@ -117,9 +135,11 @@
             </div>
           </div>
         </div>
-        <div class="col- mb5">
-          <div class="card shadow">
-            <img src="images/buku6.jpg" class="card-img-top" />
+        <div class="col">
+          <div class="card h-100 shadow">
+            <div class="card-img-top">
+              <img src="images/buku6.jpg" alt="Plakat">
+            </div>
             <div class="card-body">
               <p class="card-text">Plakat</p>
             </div>
@@ -134,31 +154,45 @@
           </div>
         </div>
       </div>
-      <!-- tntang kami -->
-      <div class="px-4 py-4 bg-secondary text-center" id="tentang">
-        <div class="mx-auto w-75">
-          <h3 class="text-white">Tentang Kami</h3>
-          <p class="text-center text-white">
-            <img src="images/about-us.png" align="left" style="width: 100px; height: auto" class="me-3bmb-3" />
-            Lartz Shop adalah website penyedia layanan design, pecetakan atau kebtuhan digital lainnya, jangan lupa ikuti kami di instagram IG: @Lartz_ | @Latiffhalik_22
-          </p>
+
+      <!-- Tentang Kami -->
+      <div class="px-4 py-4 bg-secondary" id="tentang">
+        <div class="container">
+          <h3 class="text-white text-center mb-4">Tentang Kami</h3>
+          <div class="row align-items-center">
+            <div class="col-md-3 text-center mb-3 mb-md-0">
+              <img src="images/about-us.png" class="img-fluid" style="max-width: 150px;">
+            </div>
+            <div class="col-md-9">
+              <p class="text-white">
+                Lartz Shop adalah website penyedia layanan design, pecetakan atau kebutuhan digital lainnya, jangan lupa ikuti kami di instagram IG: @Lartz_ | @Latiffhalik_22
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Cara order -->
-      <div class="px-4 py-4 bg-light text-center" id="order">
-        <div class="mx-auto w-75">
-          <h3 class="text-dark">Cara Order</h3>
-          <p class="text-center text-dark">
-            <img src="images/order.png" align="right" style="width: 100px; height: auto" class="ms-3bmb-3" />
-            pemesanan di lakukan melalui kontak whats'app yang telah tercantum setelah di klik bagian pemesanan, sementara jika ingin memesan barang di luar katalog bisa di tanyakan melalui kontak whats'app 085180772795(Lartz)
-          </p>
+      <!-- Cara Order -->
+      <div class="px-4 py-4 bg-light" id="order">
+        <div class="container">
+          <h3 class="text-dark text-center mb-4">Cara Order</h3>
+          <div class="row align-items-center flex-column-reverse flex-md-row">
+            <div class="col-md-9">
+              <p class="text-dark">
+                pemesanan di lakukan melalui kontak whats'app yang telah tercantum setelah di klik bagian pemesanan, sementara jika ingin memesan barang di luar katalog bisa di tanyakan melalui kontak whats'app 085180772795(Lartz)
+              </p>
+            </div>
+            <div class="col-md-3 text-center mb-3 mb-md-0">
+              <img src="images/order.png" class="img-fluid" style="max-width: 150px;">
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- copyright -->
       <div class="text-center p-4 border-top">&copy; 2024 Latiffhalik_22</div>
     </div>
+
     <!-- modal -->
 
     <!-- Button trigger modal -->
