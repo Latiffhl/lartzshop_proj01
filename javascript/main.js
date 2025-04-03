@@ -1,27 +1,33 @@
-document.querySelectorAll('.btnDetail').forEach((item) => {
-  item.addEventListener('click', (e) => {
-    let parent = e.target.parentNode.parentNode;
+document.addEventListener("DOMContentLoaded", function() {
+    const btnDetails = document.querySelectorAll('.btnDetail');
+    const btnModal = document.querySelector('.btnModal');
+    const modalTitle = document.querySelector('.modalTitle');
+    const modalDeskripsi = document.querySelector('.modalDeskripsi');
+    const modalImage = document.querySelector('.modalImage');
+    const modalHarga = document.querySelector('.modalHarga');
+    const btnBeli = document.querySelector('.btnBeli');
 
-    let gambar = parent.querySelector('.card-img-top').src;
-    let harga = parent.querySelector('.harga').innerHTML;
-    let judul = parent.querySelector('.card-text').innerHTML;
-    let deskripsi = parent.querySelector('.deskripsi') ? parent.querySelector('.deskripsi').innerHTML : '<i>tidak ada informasi yang tersedia</i> ';
-
-    let tombolModal = document.querySelector('.btnModal');
-    tombolModal.click();
-
-    document.querySelector('.modalTitle').innerHTML = judul;
-    let image = document.createElement('img');
-    image.src = gambar;
-    image.classList.add('w-100');
-    document.querySelector('.modalImage').innerHTML = '';
-    document.querySelector('.modalImage').appendChild(image);
-    document.querySelector('.modalDeskripsi').innerHTML = deskripsi;
-    document.querySelector('.modalHarga').innerHTML = harga;
-
-    const nohp = '+6285180772795';
-    let pesan = `https://api.whatsapp.com/send?phone=${nohp}&text=halo bang, saya mau pesan produk ini ${gambar}`;
-
-    document.querySelector('.btnBeli').href = pesan;
-  });
+    btnDetails.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const card = btn.closest('.card');
+            const title = card.querySelector('.card-text').textContent;
+            const deskripsi = card.querySelector('.deskripsi').innerHTML;
+            const harga = card.querySelector('.harga').textContent;
+            // Get image source from the card's img element
+            const imgSrc = card.querySelector('img').getAttribute('src');
+            
+            // Set modal content
+            modalTitle.textContent = title;
+            modalDeskripsi.innerHTML = deskripsi;
+            modalHarga.textContent = harga;
+            // Set image in modal
+            modalImage.innerHTML = `<img src="${imgSrc}" class="img-fluid" alt="${title}">`;
+            
+            // Set WhatsApp link
+            const message = `Halo, saya ingin order ${title} dengan harga ${harga}`;
+            btnBeli.href = `https://wa.me/6285180772795?text=${encodeURIComponent(message)}`;
+            
+            btnModal.click();
+        });
+    });
 });
