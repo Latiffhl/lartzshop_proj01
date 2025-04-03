@@ -1,0 +1,100 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    overflow-x: hidden;
+}
+
+/* Responsive typography */
+h1 {
+    color: #63863;
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+/* Card images */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Container adjustments */
+.container {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Text wrapping for product descriptions */
+.text-center.w-50.mx-auto {
+    width: 90% !important;
+    margin: 1rem auto;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Card adjustments */
+.card {
+    height: 100%;
+    word-wrap: break-word;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    white-space: normal;
+}
+
+/* Modal adjustments */
+.modal-body {
+    padding: 1rem;
+}
+
+.modalDeskripsi p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Modal responsiveness */
+@media (max-width: 768px) {
+    .modal-body {
+        flex-direction: column;
+    }
+    
+    .modalImage {
+        margin-bottom: 1rem;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* Media queries for mobile */
+@media (max-width: 576px) {
+    .gx-4 {
+        --bs-gutter-x: 1rem;
+    }
+    
+    .p-4 {
+        padding: 1rem !important;
+    }
+    
+    .card-img-top {
+        height: 180px;
+    }
+    
+    .harga {
+        font-size: 0.9rem;
+    }
+}
+
+/* Navbar adjustments */
+@media (max-width: 991px) {
+    .navbar-nav {
+        margin-top: 1rem;
+    }
+}
